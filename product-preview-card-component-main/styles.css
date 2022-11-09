@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --button-green-hover: hsl(155, 37%, 18%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);  
+    height: 100vh;
+    color: hsl(228, 12%, 48%);
+    font-size: 0.875rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    background: var(--white);
+    width: 37.5rem;
+    display: flex;
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+
+.desktop-img{
+    width: 50%;
+    object-fit: cover;
+}
+
+.mobile-img{
+    display: none;
+}
+
+.card__text {
+    margin: 0 1.875rem;
+}
+
+.card__text h6 {
+    font-size: 0.75rem;
+    font-weight: lighter;
+    margin: 1.875rem 0px 1.375rem 0;
+    letter-spacing: 0.5rem;
+}
+
+.card__text button {
+    background: var(--dark-cyan);
+    border-radius: 0.5rem;
+    width: 100%;
+    min-height: 1.875rem;
+    color: var(--white);
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    margin-bottom: 1.75rem;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.card__text button:hover {
+    background: var(--button-green-hover)
+}
+
+.card__text button img {
+    width: 15px;
+    object-fit: cover;
+    margin: 0 0.625rem -0.125rem 0;
+}
+
+.card__text h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.0625rem;
+    color: var(--very-dark-blue);
+    line-height: 1;
+}
+
+.card-text-description {
+    margin-top: 1.5rem;
+    line-height: 1.8;
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.disscount-price {
+    color: var(--dark-cyan);
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    margin-left: 1rem;
+}
+
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width: 425px){
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 21.875rem;
+    }
+
+    .desktop-img{
+        display: none;
+    }      
+
+    .mobile-img{
+        display: block;
+        object-fit: cover;
+    }
+
+    .card__text h6 {
+        font-size: 0.75rem;
+        font-weight: lighter;
+        margin: 1.125rem 0 0.625rem 0;
+        letter-spacing: 8px;
+    }
+
+    .card-text-description {
+        margin-top: 1rem;
+        line-height: 1.8;
+    }
+
+    .price-container {
+        display: flex;
+        align-items: center;
+        margin: 1.25rem 0;
+    }
+
+    .attribution{
+        font-size: 0.75rem;
+    }
+}
