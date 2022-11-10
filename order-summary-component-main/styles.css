@@ -1,0 +1,50 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated--blue: hsl(224, 23%, 55%);
+    --dark--blue: hsl(223, 47%, 23%);
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    background:var(--pale-blue);
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+}
+
+picture,
+video,
+canvas,
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+textarea,
+input,
+select {
+    font: inherit;
+}
+
+ p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
