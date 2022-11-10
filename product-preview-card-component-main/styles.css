@@ -23,9 +23,6 @@ body {
     color: hsl(228, 12%, 48%);
     font-size: 0.875rem;
     font-family: 'Montserrat', sans-serif;
-}
-
-.container {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -55,11 +52,12 @@ body {
     margin: 0 1.875rem;
 }
 
-.card__text .text-tag {
+.text-tag {
     font-size: 0.75rem;
     font-weight: lighter;
     margin: 1.875rem 0px 1.375rem 0;
     letter-spacing: 0.5rem;
+    text-transform:uppercase;
 }
 
 .card__text button {
@@ -156,6 +154,6 @@ body {
     }
 
     .attribution{
-        font-size: 0.75rem;
+        display: none;
     }
 }
