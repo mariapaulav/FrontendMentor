@@ -202,20 +202,23 @@ a:hover {
   .snippets {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     width: 100%;
     text-align: left;
   }
 
   .snippets img {
     position: relative;
-    right: 70px;
+    right: 4.375rem;
   }
 
   .snippets-functions {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-left: 5rem;
+  }
+  .snippets-functions div {
+    max-width: 20rem;
   }
 
   .footer img {
@@ -224,6 +227,10 @@ a:hover {
 
   .container1 {
     max-width: 45rem;
+  }
+
+  .containerButtons {
+    padding: 0 5rem;
   }
 
   .grid-info {
