@@ -36,7 +36,6 @@ dd,
 figure {
   margin: 0;
   font-family: "Bai Jamjuree", sans-serif;
-  text-align: center;
 }
 
 h1,
@@ -62,7 +61,6 @@ ul,
 ol {
   list-style: none;
   padding: 0;
-  flex-basis: 0;
 }
 
 img {
@@ -78,6 +76,22 @@ button {
   background-color: var(--clr-primary-strong-cyan);
   width: 100%;
   font-weight: bold;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 0px 5px 0px hsl(171, 83%, 35%);
+}
+
+button:hover {
+  background-color: hsl(171, 62%, 68%);
+}
+
+.blue-button {
+  background-color: var(--clr-primary-light-blue);
+  box-shadow: 0px 5px 0px hsl(233, 63%, 60%);
+}
+
+.blue-button:hover {
+  background-color: hsl(233, 100%, 75%);
 }
 
 a {
@@ -85,11 +99,16 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--clr-primary-strong-cyan);
+  text-decoration: none;
+}
+
 .header {
   background: url("./images/bg-header-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 4rem;
+  padding: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,6 +117,7 @@ a {
 .container {
   padding: 0 2em;
   margin: 0 auto;
+  text-align: center;
 }
 
 .footer {
@@ -126,10 +146,6 @@ a {
 .l-space {
   margin-top: 4rem;
   margin-bottom: 1rem;
-}
-
-.blue-button {
-  background-color: var(--clr-primary-light-blue);
 }
 
 .center-items {
@@ -169,6 +185,7 @@ a {
 @media (min-width: 49rem) {
   .header {
     background: url("./images/bg-header-desktop.png");
+    padding: 7rem;
   }
 
   .split {
@@ -179,7 +196,26 @@ a {
   }
 
   .split > * {
-    flex-basis: 100%;
+    flex: 1%;
+  }
+
+  .snippets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    text-align: left;
+  }
+
+  .snippets img {
+    position: relative;
+    right: 70px;
+  }
+
+  .snippets-functions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .footer img {
@@ -190,7 +226,28 @@ a {
     max-width: 45rem;
   }
 
+  .grid-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+
+  .grid-info > * {
+    margin-top: 1rem;
+  }
+
+  .social img {
+    width: 1.7rem;
+    justify-content: center;
+    margin: 1rem;
+  }
+
+  .social {
+    justify-content: center;
+  }
+
   button {
     margin-right: 1rem;
+    margin-top: 1rem;
   }
 }
