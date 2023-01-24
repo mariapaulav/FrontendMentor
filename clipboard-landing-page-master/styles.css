@@ -108,7 +108,7 @@ a:hover {
   background: url("./images/bg-header-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 5rem;
+  padding: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,6 +185,7 @@ a:hover {
 @media (min-width: 49rem) {
   .header {
     background: url("./images/bg-header-desktop.png");
+    padding: 7rem;
   }
 
   .split {
