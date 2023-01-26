@@ -79,10 +79,19 @@ img {
 
 body {
     background: linear-gradient(to bottom, var(--bg-soft-violet), var(--bg-soft-blue));
-    padding: 3rem;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
     background: white;
-    
+    max-width: fit-content;
+    margin: 2rem;
+}
+
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
