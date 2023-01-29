@@ -4,36 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
 </head>
 <body>
-  <div class="container">
-    <img src="./images/illustration-woman-online-mobile.svg" alt="">
-    <h1>FAQ</h1>
-    <section>
-      <h2>How many team members can I invite?</h2>
-      <p>You can invite up to 2 additional users on the Free plan. There is no limit on
-      team members for the Premium plan.</p>
-    </section>
-    <section>
-      <h2>What is the maximum file upload size?</h2>
-      <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
-    </section>
-    <section>
-      <h2>How do I reset my password?</h2>
-      <p>Click “Forgot password” from the login page or “Change password” from your profile page.
-      A reset link will be emailed to you.</p>
-    </section>
-    <section>
-      <h2>Can I cancel my subscription?</h2>
-      <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
-    </section>
-    <section>
-      <h2>Do you provide additional support?</h2>
-      <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
-    </section>
-  </div>
+  <main class="main">
+    <div class="container">
+      <div class="image">
+        <img class="mobile-image" src="./images/illustration-woman-online-mobile.svg" alt="">
+        <img class="mobile-shadow-image" src="./images/bg-pattern-desktop.svg" alt="">
+        <img class="desktop-image" src="./images/illustration-woman-online-desktop.svg" alt="">
+        <img class="mobile-shadow-desktop" src="./images/bg-pattern-desktop.svg" alt="">
+        <img class="desktop-box" src="./images/illustration-box-desktop.svg" alt="">
+      </div>
+      
+      <div class="text-container flow-content">
+        <h1 class="title">FAQ</h1>
+        <section>
+          <div class="title-question">
+            <h2 id="question-1">How many team members can I invite?</h2>
+            <button id="button-1" class="toggle-button-close"></button>
+          </div>
+          <p id="answer-1" class="hide-answer">You can invite up to 2 additional users on the Free plan. There is no limit on
+          team members for the Premium plan.</p>
+        </section>
+        <hr>
+        <section>
+          <div class="title-question">
+            <h2 id="question-2">What is the maximum file upload size?</h2>
+            <button id="button-2" class="toggle-button-close"></button>
+          </div>
+          <p id="answer-2" class="hide-answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+        </section>
+        <hr>
+        <section>
+          <div class="title-question">
+            <h2 id="question-3">How do I reset my password?</h2>
+            <button id="button-3" class="toggle-button-close"></button>
+          </div>
+          <p  id="answer-3" class="hide-answer">Click “Forgot password” from the login page or “Change password” from your profile page.
+          A reset link will be emailed to you.</p>
+        </section>
+        <hr>
+        <section>
+          <div class="title-question">
+            <h2 id="question-4">Can I cancel my subscription?</h2>
+            <button id="button-4" class="toggle-button-close"></button>
+          </div>
+          <p id="answer-4" class="hide-answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+        </section>
+        <hr>
+        <section>
+          <div class="title-question">
+            <h2 id="question-5">Do you provide additional support?</h2>
+            <button id="button-5" class="toggle-button-close"></button>
+          </div>
+          <p id="answer-5" class="hide-answer">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+        </section>
+        <hr>
+      </div>
+    </div>
+  </main>
+  <script src="./accordion.js"></script>
 </body>
 </html>

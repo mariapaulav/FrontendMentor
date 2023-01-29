@@ -1,25 +1,25 @@
 :root {
-    --bg-soft-violet: hsl(273, 75%, 66%);
-    --bg-soft-blue: hsl(240, 73%, 65%);
+  --bg-soft-violet: hsl(273, 75%, 66%);
+  --bg-soft-blue: hsl(240, 73%, 65%);
 
-    --text-soft-red: hsl(14, 88%, 65%);
-    --text-very-dark-grayish-blue: hsl(237, 12%, 33%);
-    --text-dark-grayish-blue: hsl(240, 6%, 50%);
+  --text-soft-red: hsl(14, 88%, 65%);
+  --text-very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --text-dark-grayish-blue: hsl(240, 6%, 50%);
 
-    --dividers-grayish-blue: hsl(240, 5%, 91%);
+  --dividers-grayish-blue: hsl(240, 5%, 91%);
 
-    --fs-300: 1rem;
+  --fs-300: 1rem;
+  --fs-600: 2rem;
 
-    --fw-400: 400;
-    --fw-700: 700;
+  --fw-400: 400;
+  --fw-700: 700;
 }
 
 /* reset */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-
+  box-sizing: border-box;
 }
 
 h1,
@@ -30,8 +30,10 @@ h3,
 .h3,
 h4,
 .h4 {
-    line-height: 1.5.rem;
-    font-weight: var(--fw-700);
+  line-height: 1.5.rem;
+  font-weight: var(--fw-400);
+  color: var(--text-dark-grayish-blue);
+  font-size: var(--fs-300);
 }
 
 body,
@@ -42,20 +44,14 @@ p,
 dl,
 dd,
 figure {
-    margin: 0;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 1rem;
-}
-
-h1,
-h2,
-h3 {
-    color: var(--clr-neutral-dark-grayish-blue);
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 p {
-    color: var(--clr-neutral-grayish-blue);
-    line-height: 1.7rem;
+  margin-top: 0.7rem;
+  color: var(--text-dark-grayish-blue);
+  line-height: 1.5rem;
 }
 
 input,
@@ -63,35 +59,184 @@ button,
 textarea,
 select,
 a {
-    font: inherit;
+  font: inherit;
+  display: inline;
 }
 
 ul,
 ol {
-    list-style: none;
-    padding: 0;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+  list-style: none;
+  padding: 0;
 }
 
 body {
-    background: linear-gradient(to bottom, var(--bg-soft-violet), var(--bg-soft-blue));
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-soft-violet),
+    var(--bg-soft-blue)
+  );
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100vw;
+}
+
+hr {
+  border: 0.05rem solid var(--dividers-grayish-blue);
+}
+
+.main {
+  padding: 6rem 1rem;
+  margin: 2rem auto 0;
+  max-width: 56rem;
 }
 
 .container {
-    background: white;
-    max-width: fit-content;
-    margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1.5rem;
 }
 
-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image .mobile-image {
+  width: 15rem;
+  margin-top: -7.5rem;
+}
+
+.image .mobile-shadow-image {
+  width: 15rem;
+  margin-top: -12.9rem;
+}
+
+.desktop-image {
+  display: none;
+}
+
+.mobile-shadow-desktop {
+  display: none;
+}
+
+.desktop-box {
+  display: none;
+}
+
+.text-container {
+  padding: 1rem;
+}
+
+.title {
+  text-align: center;
+  font-weight: var(--fw-700);
+  font-size: var(--fs-600);
+  margin-bottom: 2rem;
+  color: var(--text-very-dark-grayish-blue);
+}
+
+.question-weight-bold {
+  font-weight: var(--fw-700);
+}
+
+.question-weight-normal {
+  font-weight: var(--fw-400);
+}
+
+.flow-content > * + * {
+  margin-top: 1rem;
+}
+
+.title-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-question h2:hover {
+  color: var(--text-soft-red);
+  cursor: pointer;
+}
+
+.toggle-button-close {
+  background: url("./images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-button-open {
+  background: url("./images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding: 1rem;
+  border: none;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.hide-answer {
+  display: none;
+}
+
+.show-answer {
+  display: block;
+}
+
+@media (min-width: 49rem) {
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .image {
+    width: 45%;
+    overflow: hidden;
+  }
+
+  .image .mobile-image {
+    display: none;
+  }
+
+  .image .mobile-shadow-image {
+    display: none;
+  }
+
+  .desktop-image {
+    display: block;
+    position: relative;
+    right: 3rem;
+    width: 110%;
+    z-index: 1;
+  }
+
+  .mobile-shadow-desktop {
+    display: block;
+    position: relative;
+    right: 20rem;
+    margin-top: -40rem;
+    margin-bottom: -15rem;
+  }
+
+  .desktop-box {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    margin-right: 23rem;
+    margin-top: 1rem;
+    width: 10rem;
+  }
+
+  .text-container {
+    padding: 2.5rem;
+    width: 55%;
+  }
 }
