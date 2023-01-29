@@ -164,19 +164,13 @@ hr {
 }
 
 .toggle-button-close {
-  background: url("./images/icon-arrow-down.svg");
-  background-repeat: no-repeat;
-  background-position: center right;
-  padding: 1rem;
+  background: transparent;
   border: none;
   cursor: pointer;
 }
 
-.toggle-button-open {
-  background: url("./images/icon-arrow-down.svg");
-  background-repeat: no-repeat;
+.toggle-button-open img {
   background-position: center left;
-  padding: 1rem;
   border: none;
   transform: rotate(180deg);
   cursor: pointer;
